@@ -1,10 +1,10 @@
 nums = [1,2,3,4,5,6,7,8,9,10]
 
 # I want 'n' for each 'n' in nums
-my_list = []
-for n in nums:
-    my_list.append(n)   
-print(my_list)
+# my_list = []
+# for n in nums:
+#     my_list.append(n)   
+# print(my_list)
 
 print([n for n in nums])
 
@@ -15,8 +15,8 @@ print([n for n in nums])
 # print my_list
 
 # Using a map + lambda
-# my_list = map(lambda n: n*n, nums)
-# print my_list
+my_list = list(map(lambda n: n*n, nums))
+print(my_list)
 
 # I want 'n' for each 'n' in nums if 'n' is even
 # my_list = []
@@ -26,8 +26,8 @@ print([n for n in nums])
 # print my_list
 
 # Using a filter + lambda
-# my_list = filter(lambda n: n%2 == 0, nums)
-# print my_list
+my_list = list(filter(lambda n: n%2 == 0, nums))
+print(my_list)
 
 # I want a (letter, num) pair for each letter in 'abcd' and each number in '0123'
 # my_list = []
@@ -47,7 +47,9 @@ heros = ['Batman', 'Superman', 'Spiderman', 'Wolverine', 'Deadpool']
 #     my_dict[name] = hero
 # print my_dict
 
-
+my_dict = {}
+my_dict = {name:hero for name, hero in zip(names, heros)}
+print(my_dict)
 
 # If name not equal to Peter
 
@@ -57,6 +59,9 @@ heros = ['Batman', 'Superman', 'Spiderman', 'Wolverine', 'Deadpool']
 # for n in nums:
 #     my_set.add(n)
 # print my_set
+
+my_set = {n for n in nums}
+print(my_set)
 
 
 # Generator Expressions
@@ -69,5 +74,7 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 
 # my_gen = gen_func(nums)
 
-# for i in my_gen:
-#     print i
+my_gen = (n for n in nums)
+
+for i in my_gen:
+    print(i)
