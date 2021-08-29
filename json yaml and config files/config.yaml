@@ -1,0 +1,9 @@
+bitbucket.org:
+  serveraliveinterval: '45'
+  user: hg
+kevin:
+  int: '3'
+  string: string
+topsecret.server.com:
+  forwardx11: 'no'
+  port: '50022'
